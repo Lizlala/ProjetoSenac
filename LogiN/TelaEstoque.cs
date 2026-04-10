@@ -129,7 +129,7 @@ namespace LogiN
         private void btnSalvarEstoque_Click(object sender, EventArgs e)
         {
             string nome = txtNomeItem.Text;
-            int quantidade = (int)Quantidade.Value; 
+            int quantidade = (int)Quantidade.Value;
             string categoria = cmbCategoria.SelectedItem?.ToString() ?? "";
 
             if (!string.IsNullOrWhiteSpace(nome) && !string.IsNullOrWhiteSpace(categoria))
@@ -157,6 +157,16 @@ namespace LogiN
             dataGridView1.Visible = true;
         }
 
-    }
+        private void TelaEstoque_Load(object sender, EventArgs e)
+        {
 
+        }
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Form2 telaClientes = new Form2();
+            telaClientes.Show();
+        }
+
+    }
 }
+
