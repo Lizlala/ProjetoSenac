@@ -16,6 +16,7 @@ namespace LogiN
         public TelaServicos()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -31,18 +32,26 @@ namespace LogiN
         }
 
 
-      
+
 
 
         private void lblServicos_Click(object sender, EventArgs e)
         {
             TelaServicos tela = new TelaServicos();
-            tela.StartPosition = FormStartPosition.CenterScreen;
+            
             tela.Show();
             this.Close();
         }
 
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

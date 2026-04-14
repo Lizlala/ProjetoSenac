@@ -9,6 +9,7 @@ namespace LogiN
         public TelaCadastro()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -140,11 +141,6 @@ namespace LogiN
             tela.Show();
             this.Close();
         }
-
-
-        
-
-
 
     }
 }

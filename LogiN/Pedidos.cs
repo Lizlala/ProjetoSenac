@@ -15,6 +15,7 @@ namespace LogiN
         public TelaPedidos()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -487,6 +487,7 @@
             MaximizeBox = false;
             Name = "TelaEstoque";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TelaEstoque";
             Load += TelaEstoque_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

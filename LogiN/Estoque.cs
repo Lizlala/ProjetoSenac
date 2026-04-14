@@ -9,6 +9,10 @@ namespace LogiN
         public TelaEstoque()
         {
             InitializeComponent();
+            btnEstoque.BackColor = Color.FromArgb(191, 165, 187);
+            btnEstoque.ForeColor = Color.Black;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             ConfigurarColunas();
 
             panelCadastro.Visible = false;
