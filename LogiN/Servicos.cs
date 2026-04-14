@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace LogiN
 {
@@ -21,5 +22,27 @@ namespace LogiN
         {
 
         }
+
+        private void btnServicos_Click(object sender, EventArgs e)
+        {
+            TelaPedidos tela = new TelaPedidos();
+            tela.Show();
+            this.Hide();
+        }
+
+
+      
+
+
+        private void lblServicos_Click(object sender, EventArgs e)
+        {
+            TelaServicos tela = new TelaServicos();
+            tela.StartPosition = FormStartPosition.CenterScreen;
+            tela.Show();
+            this.Close();
+        }
+
+
     }
+
 }

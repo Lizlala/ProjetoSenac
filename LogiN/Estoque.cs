@@ -167,6 +167,27 @@ namespace LogiN
             telaClientes.Show();
         }
 
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientes_Click_1(object sender, EventArgs e)
+        {
+            TelaPedidos tela = new TelaPedidos();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void btnServicos_Click(object sender, EventArgs e)
+        {
+            TelaPedidos tela = new TelaPedidos();
+            tela.StartPosition = FormStartPosition.CenterScreen;
+            tela.Show();
+            this.Hide();
+        }
+
+
     }
 }
 
