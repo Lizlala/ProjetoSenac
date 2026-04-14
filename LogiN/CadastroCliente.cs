@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace LogiN
 {
@@ -126,6 +128,21 @@ namespace LogiN
             }
         }
 
+<<<<<<< HEAD
+        private void btnSalvarClientes_Click(object sender, EventArgs e)
+        {
+           InserirBanco banco = new InserirBanco();
+           banco.Inserir(txtNomeCompleto.Text, txtTelefone.Text, txtCPF.Text);
+           
+
+
+        }
+
+        private void panelCadastroCliente_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+=======
         private void btnServicos_Click(object sender, EventArgs e)
         {
             TelaPedidos tela = new TelaPedidos();
@@ -142,5 +159,14 @@ namespace LogiN
             this.Close();
         }
 
+<<<<<<< HEAD
+=======
+
+        
+
+
+
+>>>>>>> 135bd99e244d11ee2246165a02a86580191487e4
+>>>>>>> d646da0451a6c5536bd3c09b253f884ba462bb76
     }
 }

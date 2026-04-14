@@ -147,10 +147,11 @@
             panelCadastroCliente.Controls.Add(label9);
             panelCadastroCliente.Controls.Add(label8);
             panelCadastroCliente.Controls.Add(CadastrarNovoCliente);
-            panelCadastroCliente.Location = new Point(300, 2);
+            panelCadastroCliente.Location = new Point(497, 47);
             panelCadastroCliente.Name = "panelCadastroCliente";
             panelCadastroCliente.Size = new Size(992, 620);
             panelCadastroCliente.TabIndex = 27;
+            panelCadastroCliente.Paint += panelCadastroCliente_Paint;
             // 
             // label10
             // 
@@ -225,6 +226,7 @@
             btnSalvarClientes.TabIndex = 8;
             btnSalvarClientes.Text = "Salvar";
             btnSalvarClientes.UseVisualStyleBackColor = false;
+            btnSalvarClientes.Click += btnSalvarClientes_Click;
             // 
             // txtTelefone
             // 
