@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace LogiN
 {
@@ -123,6 +125,20 @@ namespace LogiN
                     cpf.Contains(termo) ||
                     telefone.Contains(termo);
             }
+        }
+
+        private void btnSalvarClientes_Click(object sender, EventArgs e)
+        {
+           InserirBanco banco = new InserirBanco();
+           banco.Inserir(txtNomeCompleto.Text, txtTelefone.Text, txtCPF.Text);
+           
+
+
+        }
+
+        private void panelCadastroCliente_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
