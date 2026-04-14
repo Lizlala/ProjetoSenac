@@ -429,6 +429,7 @@
             btnServicos.TabIndex = 2;
             btnServicos.Text = "Pedidos";
             btnServicos.UseVisualStyleBackColor = false;
+            btnServicos.Click += btnServicos_Click;
             // 
             // btnClientes
             // 
@@ -447,6 +448,7 @@
             btnClientes.TabIndex = 1;
             btnClientes.Text = "Clientes";
             btnClientes.UseVisualStyleBackColor = false;
+            btnClientes.Click += btnClientes_Click_1;
             // 
             // btnEstoque
             // 
@@ -466,6 +468,7 @@
             btnEstoque.TabIndex = 0;
             btnEstoque.Text = "Estoque";
             btnEstoque.UseVisualStyleBackColor = false;
+            btnEstoque.Click += btnEstoque_Click;
             // 
             // TelaEstoque
             // 

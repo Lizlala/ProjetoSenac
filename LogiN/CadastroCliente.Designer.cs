@@ -420,6 +420,7 @@
             btnServicos.TabIndex = 2;
             btnServicos.Text = "Pedidos";
             btnServicos.UseVisualStyleBackColor = false;
+            btnServicos.Click += btnServicos_Click;
             // 
             // btnClientes
             // 

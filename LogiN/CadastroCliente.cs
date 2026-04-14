@@ -127,6 +127,7 @@ namespace LogiN
             }
         }
 
+<<<<<<< HEAD
         private void btnSalvarClientes_Click(object sender, EventArgs e)
         {
            InserirBanco banco = new InserirBanco();
@@ -140,5 +141,28 @@ namespace LogiN
         {
 
         }
+=======
+        private void btnServicos_Click(object sender, EventArgs e)
+        {
+            TelaPedidos tela = new TelaPedidos();
+            tela.Show();
+            this.Hide();
+        }
+
+
+        private void lblCadastroClientes_Click(object sender, EventArgs e)
+        {
+            TelaCadastro tela = new TelaCadastro();
+            tela.StartPosition = FormStartPosition.CenterScreen;
+            tela.Show();
+            this.Close();
+        }
+
+
+        
+
+
+
+>>>>>>> 135bd99e244d11ee2246165a02a86580191487e4
     }
 }

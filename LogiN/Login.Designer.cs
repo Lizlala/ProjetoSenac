@@ -90,7 +90,7 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(290, 26);
             txtSenha.TabIndex = 6;
-            txtSenha.UseSystemPasswordChar = true;
+            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // label3
             // 

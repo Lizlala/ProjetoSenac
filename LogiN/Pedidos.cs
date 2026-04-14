@@ -17,5 +17,34 @@ namespace LogiN
             InitializeComponent();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            TelaEstoque tela = new TelaEstoque();
+            tela.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TelaServicos tela = new TelaServicos();
+            tela.Show();
+            this.Hide();
+        }
+
+
+        private void lblPedidos_Click(object sender, EventArgs e)
+        {
+            TelaPedidos tela = new TelaPedidos();
+            tela.StartPosition = FormStartPosition.CenterScreen;
+            tela.Show();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TelaCadastro tela = new TelaCadastro();
+            tela.Show();
+            this.Hide();
+        }
     }
 }
