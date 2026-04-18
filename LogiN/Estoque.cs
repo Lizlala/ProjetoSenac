@@ -9,13 +9,14 @@ namespace LogiN
         public TelaEstoque()
         {
             InitializeComponent();
-            btnEstoque.BackColor = Color.FromArgb(191, 165, 187);
-            btnEstoque.ForeColor = Color.Black;
+
+            btnEstoqueE.BackColor = Color.FromArgb(191, 165, 187);
+            btnEstoqueE.ForeColor = Color.Black;
             this.StartPosition = FormStartPosition.CenterScreen;
 
             ConfigurarColunas();
 
-            panelCadastro.Visible = false;
+            panelCadastroEstoque.Visible = false;
 
             dataGridView1.Rows.Add("Tecido Algodão Branco", "25", "Tecido");
             dataGridView1.Rows.Add("Tecido Jeans Azul", "15", "Tecido");
@@ -77,8 +78,8 @@ namespace LogiN
         private void btnAbrirCadastro_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = false;
-            panelCadastro.Visible = true;
-            panelCadastro.BringToFront();
+            panelCadastroEstoque.Visible = true;
+            panelCadastroEstoque.BringToFront();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -90,7 +91,7 @@ namespace LogiN
             if (!string.IsNullOrWhiteSpace(nome) && !string.IsNullOrWhiteSpace(categoria))
             {
                 dataGridView1.Rows.Add(nome, quantidade.ToString(), categoria);
-                panelCadastro.Visible = false;
+                panelCadastroEstoque.Visible = false;
                 dataGridView1.Visible = true;
             }
             else
@@ -101,7 +102,7 @@ namespace LogiN
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            panelCadastro.Visible = false;
+            panelCadastroEstoque.Visible = false;
             dataGridView1.Visible = true;
         }
 
@@ -143,7 +144,7 @@ namespace LogiN
                 txtNomeItem.Clear();
                 Quantidade.Value = 0;
                 cmbCategoria.SelectedIndex = -1;
-                panelCadastro.Visible = false;
+                panelCadastroEstoque.Visible = false;
                 dataGridView1.Visible = true;
             }
             else
@@ -152,45 +153,35 @@ namespace LogiN
             }
         }
 
-        private void btnCancelarEstoque_Click(object sender, EventArgs e)
+        private void btnVoltarE_Click(object sender, EventArgs e)
         {
             txtNomeItem.Clear();
             Quantidade.Value = 0;
             cmbCategoria.SelectedIndex = -1;
-            panelCadastro.Visible = false;
+            panelCadastroEstoque.Visible = false;
             dataGridView1.Visible = true;
         }
 
-        private void TelaEstoque_Load(object sender, EventArgs e)
+        private void btnClientesE_Click(object sender, EventArgs e)
         {
-
-        }
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            TelaCadastro telaClientes = new TelaCadastro();
+            TelaClientes telaClientes = new TelaClientes();
             telaClientes.Show();
+            this.Hide();
         }
 
-        private void btnEstoque_Click(object sender, EventArgs e)
+        private void btnServicosE_Click(object sender, EventArgs e)
         {
-
+            TelaServicos tela = new TelaServicos();
+            tela.Show();
+            this.Hide();
         }
 
-        private void btnClientes_Click_1(object sender, EventArgs e)
+        private void btnPedidosE_Click(object sender, EventArgs e)
         {
             TelaPedidos tela = new TelaPedidos();
             tela.Show();
             this.Hide();
         }
-
-        private void btnServicos_Click(object sender, EventArgs e)
-        {
-            TelaPedidos tela = new TelaPedidos();
-            tela.StartPosition = FormStartPosition.CenterScreen;
-            tela.Show();
-            this.Hide();
-        }
-
 
     }
 }

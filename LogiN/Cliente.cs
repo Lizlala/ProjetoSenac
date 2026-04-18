@@ -1,24 +1,29 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-
 
 namespace LogiN
 {
-    public partial class TelaCadastro : Form
+    public partial class TelaClientes : Form
     {
-        public TelaCadastro()
+        public TelaClientes()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            // Garante que o evento Load seja chamado
+            this.Load += TelaClientes_Load;
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void TelaClientes_Load(object sender, EventArgs e)
         {
             ConfigurarColunasClientes();
-            panelCadastroCliente.Visible = false;
 
+            // Inicialmente mostra a lista e esconde o cadastro
+            panelCadastroCliente.Visible = false;
+            dataGridViewClientes.Visible = true;
+
+            // Dados de exemplo
             dataGridViewClientes.Rows.Add("Maria Silva", "123.456.789-00", "(11) 98765-4321");
             dataGridViewClientes.Rows.Add("João Santos", "987.654.321-00", "(11) 91234-5678");
             dataGridViewClientes.Rows.Add("Ana Costa", "456.789.123-00", "(11) 99876-5432");
@@ -66,6 +71,7 @@ namespace LogiN
             dataGridViewClientes.DefaultCellStyle = cellStyle;
         }
 
+        // Botão para abrir o cadastro
         private void btnNovoCliente_Click(object sender, EventArgs e)
         {
             dataGridViewClientes.Visible = false;
@@ -73,7 +79,8 @@ namespace LogiN
             panelCadastroCliente.BringToFront();
         }
 
-        private void btnSalvarCliente_Click(object sender, EventArgs e)
+        // Botão salvar dentro do cadastro
+        private void btnSalvarClientes_Click(object sender, EventArgs e)
         {
             string nome = txtNomeCompleto.Text;
             string cpf = txtCPF.Text;
@@ -91,6 +98,7 @@ namespace LogiN
 
                 panelCadastroCliente.Visible = false;
                 dataGridViewClientes.Visible = true;
+                dataGridViewClientes.BringToFront();
             }
             else
             {
@@ -99,7 +107,8 @@ namespace LogiN
             }
         }
 
-        private void btnCancelarCliente_Click(object sender, EventArgs e)
+        // Botão voltar/cancelar dentro do cadastro
+        private void btnVoltarCliente_Click(object sender, EventArgs e)
         {
             txtNomeCompleto.Clear();
             txtCPF.Clear();
@@ -107,8 +116,10 @@ namespace LogiN
 
             panelCadastroCliente.Visible = false;
             dataGridViewClientes.Visible = true;
+            dataGridViewClientes.BringToFront();
         }
 
+        // Busca em tempo real
         private void txtBuscaCliente_TextChanged(object sender, EventArgs e)
         {
             string termo = txtBuscaCliente.Text.ToLower();
@@ -128,45 +139,26 @@ namespace LogiN
             }
         }
 
-<<<<<<< HEAD
-        private void btnSalvarClientes_Click(object sender, EventArgs e)
+        // Navegação lateral
+        private void btnEstoqueC_Click(object sender, EventArgs e)
         {
-           InserirBanco banco = new InserirBanco();
-           banco.Inserir(txtNomeCompleto.Text, txtTelefone.Text, txtCPF.Text);
-           
-
-
+            TelaEstoque tela = new TelaEstoque();
+            tela.Show();
+            this.Hide();
         }
 
-        private void panelCadastroCliente_Paint(object sender, PaintEventArgs e)
+        private void btnServicosC_Click(object sender, EventArgs e)
         {
-
+            TelaServicos tela = new TelaServicos();
+            tela.Show();
+            this.Hide();
         }
-=======
-        private void btnServicos_Click(object sender, EventArgs e)
+
+        private void btnPedidosC_Click(object sender, EventArgs e)
         {
             TelaPedidos tela = new TelaPedidos();
             tela.Show();
             this.Hide();
         }
-
-
-        private void lblCadastroClientes_Click(object sender, EventArgs e)
-        {
-            TelaCadastro tela = new TelaCadastro();
-            tela.StartPosition = FormStartPosition.CenterScreen;
-            tela.Show();
-            this.Close();
-        }
-
-<<<<<<< HEAD
-=======
-
-        
-
-
-
->>>>>>> 135bd99e244d11ee2246165a02a86580191487e4
->>>>>>> d646da0451a6c5536bd3c09b253f884ba462bb76
     }
 }
